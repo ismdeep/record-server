@@ -3,6 +3,7 @@ package api
 import (
 	"record-server/serializer"
 	"record-server/service"
+	"record-server/session"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
@@ -32,7 +33,7 @@ func UserLogin(c *gin.Context) {
 
 // UserMe 用户详情
 func UserMe(c *gin.Context) {
-	user := CurrentUser(c)
+	user := session.CurrentUser(c)
 	res := serializer.BuildUserResponse(*user)
 	c.JSON(200, res)
 }

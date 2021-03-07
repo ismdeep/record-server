@@ -9,6 +9,7 @@ type Record struct {
 	gorm.Model
 	UserId    uint
 	EventTime time.Time
-	Title     string
+	Comment   string
 	Amount    int
+	Tags      string
 }
