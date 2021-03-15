@@ -9,10 +9,10 @@ import (
 )
 
 type RecordAddService struct {
-	EventTime string `form:"event_time" json:"event_time" binding:"required"`
-	Comment   string `form:"comment" json:"comment" binding:"required"`
-	Amount    int    `form:"amount" json:"amount" binding:"required"`
-	Tags      string `form:"tags" json:"tags" binding:"required"`
+	EventTime string  `form:"event_time" json:"event_time" binding:"required"`
+	Comment   string  `form:"comment" json:"comment" binding:"required"`
+	Amount    float64 `form:"amount" json:"amount"`
+	Tags      string  `form:"tags" json:"tags" binding:"required"`
 }
 
 // 添加记录

@@ -8,7 +8,7 @@ import (
 type Record struct {
 	ID        uint      `json:"id"`
 	EventTime time.Time `json:"event_time"`
-	Amount    int       `json:"amount"`
+	Amount    float64   `json:"amount"`
 	Comment   string    `json:"comment"`
 	Tags      string    `json:"tags"`
 }

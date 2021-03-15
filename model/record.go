@@ -10,6 +10,6 @@ type Record struct {
 	UserId    uint
 	EventTime time.Time
 	Comment   string
-	Amount    int
+	Amount    float64
 	Tags      string
 }
